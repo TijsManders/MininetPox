@@ -24,7 +24,7 @@ def treeTopo():
     net.addLink( h1, s1 )
     net.addLink( h2, s1 )
     net.addLink( h3, s2 )
-    net.addLink( root,l1 )
+    net.addLink( root,s2)
 
     info( 'Netwerk wordt gestart\n')
     net.start()
