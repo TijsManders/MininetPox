@@ -19,16 +19,13 @@ def treeTopo():
     s2 = net.addSwitch( 's2' )
     
     info( 'Verbindingen worden toegevoegd\n' )
+    root = s1
+    layer1 = [s2]
     net.addLink( h1, s1 )
     net.addLink( h2, s1 )
     net.addLink( h3, s2 )
-   
-    root = s1
-    layer1 = [s1,s2]
-    
-    for idx,l1 in enumerate(layer1):
-        net.addLink( root,l1 )
-        
+    net.addLink( root,l1 )
+
     info( 'Netwerk wordt gestart\n')
     net.start()
     
